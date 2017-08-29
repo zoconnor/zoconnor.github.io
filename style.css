@@ -1,6 +1,23 @@
 body {
-    background-color: green;
+    background-color: #f4f4f4;
 }
-p {
-  font-size: 14px;
+h1 {
+    font-size: 250%;
+    color: #C0B283;
+    text-align: center;
+    
+}
+h2 {
+  font-size: 200%;
+    color: #C0B283;
+    text-align: center;  
+}
+h3{
+    font-size: 100%;
+    color:aqua;
+}
+p{
+    font-size: 100%
+    color: #373737;
+    text-align: center;
 }
