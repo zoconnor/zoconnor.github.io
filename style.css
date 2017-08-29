@@ -14,10 +14,13 @@ h2 {
 }
 h3{
     font-size: 100%;
-    color:aqua;
+    color:#DCD0C0;
 }
 p{
     font-size: 100%
     color: #373737;
     text-align: center;
+}
+a{
+    color: #DCD0C0
 }
