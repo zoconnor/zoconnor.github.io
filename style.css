@@ -2,7 +2,7 @@ body {
     background-color: lightslategray;
 }
 * {
- font-family: Futura, Helvetica, Arial, ;
+ font-family: avenir, Helvetica, Arial ;
 }
 div.container {
     width: 100%;
@@ -15,7 +15,7 @@ header, footer {
     background-color: #f4f4f4;
     clear: left;
     text-align: center;
-    font-size: 80%;
+    font-size: 60%;
 }
 nav {
     float: left;
