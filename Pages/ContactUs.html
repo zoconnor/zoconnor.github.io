@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <title>Contact Us</title>
     <link rel="stylesheet" type="text/css" href="../style.css" />
+    <script type="text/javascript" src="/javascript.js"></script>
     <style type="text/css">
         <style> input[type=text],
         select,
@@ -19,7 +20,7 @@
             margin-bottom: 16px;
             resize: vertical;
         }
-
+        
         input[type=submit] {
             background-color: #4CAF50;
             color: white;
@@ -28,11 +29,11 @@
             border-radius: 4px;
             cursor: pointer;
         }
-
+        
         input[type=submit]:hover {
             background-color: #45a049;
         }
-
+        
         input[type=clear] {
             background-color: #4CAF50;
             color: white;
@@ -42,11 +43,11 @@
             cursor: pointer;
             width: 18%
         }
-
+        
         input[type=clear]:hover {
             background-color: #45a049;
         }
-
+        
         .container {
             border-radius: 5px;
             background-color: #f2f2f2;
@@ -56,30 +57,30 @@
 </head>
 
 <body>
-    <h1>
+    <h1 style="font-size: 200%" "text-align: center">
     Zach Auto
-  </h1>
-    <h2>
-    <A HREF="/index.htm">Home</A>
-  </h2>
-    <h3>
+    </h1>
+    <h2 style="font-size: 100%">
+    <a HREF="/index.htm">Home</a>
+    </h2>
+    <h2 style="text-align: center">
     Contact Us
-  </h3>
+    </h2>
     <p>
         Please use this form to contact us and we will reply via email as soon as possible.
         <div class="container">
-            <form action="" method="">
+            <form name="contactForm " action="" method="" onsubmit="return validateForm()">
                 <label for="fname">First Name:</label>
-                <input type="text" id="fname" name="firstname" placeholder="Ex: John">
+                <input type="text" name="firstname" placeholder="Ex: John">
                 <br />
                 <label for="lname">Last Name:</label>
-                <input type="text" id="lname" name="lastname" placeholder="Ex: Doe">
+                <input type="text" name="lastname" placeholder="Ex: Doe">
                 <br />
                 <label for="email">Email:</label>
-                <input type="text" id="email" name="email" placeholder="Ex: jdoe@mail.com">
+                <input type="text" name="email" placeholder="Ex: jdoe@mail.com">
                 <br />
                 <label for="contact reason">Contact Reason:</label>
-                <select id="contact reason" name="contact reason">
+                <select name="contactreason">
                     <option value="question">Question</option>
                     <option value="problem">Problem</option>
                     <option value="order status update">Order Status Update</option>
@@ -87,10 +88,10 @@
                 <br />
                 <label for="subject">Subject:</label>
                 <br />
-                <textarea id="subject" name="subject" placeholder="Type comment here..." style="height:200px"></textarea>
+                <textarea name="subject" placeholder="Type comment here..." style="height:200px"></textarea>
                 <br />
-                <input type="clear" value="Clear">
                 <input type="submit" value="Submit">
+                <input type="clear" value="Clear">
             </form>
         </div>
 </body>

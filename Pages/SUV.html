@@ -78,7 +78,13 @@
             </table>
         </article>
 
-        <footer><a href="Pages/ContactUs.html">Contact Us</a>
+        <footer>
+            <a href="Pages/ContactUs.html">Contact Us</a>
+            <p id="date"></p>
+            <script>
+                var d = new Date();
+                document.getElementById("date").innerHTML = d.toDateString();
+            </script>
         </footer>
 
     </div>
