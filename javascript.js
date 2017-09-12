@@ -1,6 +1,6 @@
 function validateForm() 
 {
-    var a = document.forms["contactForm"]["firstname"].value;
+    var a = document.forms[contactForm][firstname].value;
     if (a == "")
         {
             alert("First Name must be filled out.");
