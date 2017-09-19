@@ -1,39 +1,35 @@
 // Contact Us - Submit Button Click
 function validateForm() 
 {
-    var a = document.forms[contactForm][firstname].value;
-    if (a == "")
+    var a = document.contactForm.firstname.value;
+    if (a == "" || a == null)
         {
             alert("First Name must be filled out.");
             return false;
         }
-    var b = document.forms[contactForm][lastname].value;
-    if (b == "")
+    var b = document.contactForm.lastname.value;
+    else if (b == "" || b == null)
         {
             alert("Last Name must be filled out.");
             return false;
         }
-    var c = document.forms[contactForm][email].value;
-    if(c == "")
+    var c = document.contactForm.email.value;
+    else if(c == "" || c == null)
         {
             alert("Email must be filled out.");
             return false; 
         }
-    var d = document.forms[contactForm][contactreason].value;
-    if(d == "")
+    var d = document.contactForm.contactreason.value;
+    else if(d == "" || d == null)
         {
             alert("Reason must be filled out.");
             return false; 
         }
-    var e = document.forms[contactForm][subject].value;
-    if(e == "")
+    var e = document.contactForm.subject.value;
+    else if(e == "" || e == null)
         {
             alert("Subject must be filled out.");
             return false; 
-        }
-    else
-        {
-            return true;
         }
 }
 
