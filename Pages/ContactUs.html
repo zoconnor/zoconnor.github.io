@@ -8,7 +8,8 @@
     <link rel="stylesheet" type="text/css" href="../style.css" />
     <script type="text/javascript" src="/javascript.js"></script>
     <style type="text/css">
-        <style> input[type=text],
+        <style> 
+        input[type=text],
         select,
         textarea {
             width: 100%;
@@ -19,11 +20,12 @@
             margin-top: 6px;
             margin-bottom: 16px;
             resize: vertical;
+            color: yellow;
         }
         
         input[type=submit] {
-            background-color: #4CAF50;
-            color: white;
+            background-color: #373737;
+            color: #DCD0C0;
             padding: 12px 20px;
             border: none;
             border-radius: 4px;
@@ -31,12 +33,13 @@
         }
         
         input[type=submit]:hover {
-            background-color: #45a049;
+            background-color: #DCD0C0;
+            color: white;
         }
         
         input[type=clear] {
-            background-color: #4CAF50;
-            color: white;
+            background-color: #373737;
+            color: #DCD0C0;
             padding: 12px 20px;
             border: none;
             border-radius: 4px;
@@ -45,29 +48,37 @@
         }
         
         input[type=clear]:hover {
-            background-color: #45a049;
+            background-color: #DCD0C0;
+            color: white;       
         }
         
         .container {
             border-radius: 5px;
-            background-color: #f2f2f2;
+            background-color: yellow;
             padding: 20px;
         }
+        
     </style>
 </head>
 
 <body>
-    <h1 style="font-size: 200%" "text-align: center">
+    <h1 style="font-size: 400%;text-align: center">
     Zach Auto
     </h1>
-    <h2 style="font-size: 100%">
-    <a HREF="/index.htm">Home</a>
-    </h2>
+<nav>
+            <ul>
+                    <li><a href="/index.htm">Home</a></li>
+                    <li><a href="/Pages/Coupe.html">Coupe</a></li>
+                    <li><a href="/Pages/Sedan.html">Sedan</a></li>
+                    <li><a href="/Pages/SUV.html">SUV</a></li>
+            </ul>
+        </nav>
     <h2 style="text-align: center">
     Contact Us
     </h2>
     <p>
-        Please use this form to contact us and we will reply via email as soon as possible.
+        Please use this form to contact us and we will reply via email as soon as possible. Thank You!
+    </p>
         <div class="container">
             <form name="contactForm" onsubmit="validateForm()">
                 <label for="fname">First Name:</label>
@@ -77,7 +88,7 @@
                 <input type="text" name="lastname" placeholder="Ex: Doe">
                 <br />
                 <label for="email">Email:</label>
-                <input type="text" name="email" placeholder="Ex: jdoe@mail.com">
+                &emsp;&emsp;&nbsp;<input type="text" name="email" placeholder="Ex: jdoe@mail.com">
                 <br />
                 <label for="contact reason">Contact Reason:</label>
                 <select name="contactreason">
@@ -90,7 +101,7 @@
                 <br />
                 <textarea name="subject" placeholder="Type comment here..." style="height:200px"></textarea>
                 <br />
-                <input type="submit" value="Submit">
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<input type="submit" value="Submit">
                 <input type="reset" value="Clear">
             </form>
         </div>
