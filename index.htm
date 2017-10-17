@@ -12,11 +12,34 @@
 
     <div class="container">
 
+        <div class = "slideshow">
         <header>
+            <img class="mySlides" src="/Photos/Home/banner.jpg" max width="100%"; align="middle"; height="auto" />
+            <img class="mySlides" src="/Photos/Home/banner2.jpg" max width="100%"; align="middle"; height="auto" />
+            <img class="mySlides" src="/Photos/Home/banner3.jpg" max width="100%"; align="middle"; height="auto" />            
             <h1>Zach Auto</h1>
-            <img src="/Photos/Home/banner.jpg" max width="100%" align="middle" />
-        </header>
 
+        </header>
+    </div>
+            <script>
+                var myIndex = 0;
+                carousel();
+
+                function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) {
+                        myIndex = 1
+                    }
+                    x[myIndex - 1].style.display = "block";
+                    setTimeout(carousel, 4000); // Change image every 2 seconds
+                }
+            </script>
+        
         <nav>
             <ul>
                     <li><a href="/index.htm">Home</a></li>
@@ -28,12 +51,11 @@
                     <a href="/Pages/SUV.html">SUV</a>                           
                 </div>
                 </div>
-                <li style="font-size: 80%"><a href="Pages/ContactUs.html">Contact Us</a></li>
+                    <li><a href="Pages/ContactUs.html">Contact Us</a></li>
             </ul>
         </nav>
 
         <article>
-            <h2>About Us</h2>
             <p>We sell only the fastest, most expensive, and nicest cars on the market.
             <img src="Photos/Home/financing.png" width= 10% align= right></p>
             <br/>
