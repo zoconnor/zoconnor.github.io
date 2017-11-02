@@ -43,7 +43,7 @@ article {
 }
 h1{
     color: #373737;
-    font-size: 500%;
+    font-size: 550%;
 }
 h2{
     color: #373737;
@@ -75,20 +75,22 @@ a:hover{
 
 /*Container needed to position the dropdown content*/
 .dropdown {
-    position: relative;
+    position: static;
     display:inline-block;
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
-    position: absolute;
-    background-color: inherit;
-    min-width: 100%;
+    position: fixed;
+    background-color: aliceblue;
+    min-width: inherit;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     overflow: auto;
-    left: 130;
+    left: 180;
+    right: auto;
+    bottom: 100px
 }
 
 /* Links inside the dropdown */
@@ -96,7 +98,7 @@ a:hover{
     color: #373737;
     padding: 12px 16px;
     text-decoration: none;
-    display: flow-root;
+    display: inline-block;
     font-size: 200%;
 }
 
@@ -105,7 +107,7 @@ a:hover{
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: inline-block;
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */

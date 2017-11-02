@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Zach's Car Dealership</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="shotcut icon" href="Photos/favicon.png">
+        <title>Zach's Car Dealership</title>
 </head>
 
 <body>
@@ -38,8 +38,7 @@
                     x[myIndex - 1].style.display = "block";
                     setTimeout(carousel, 4000); // Change image every 2 seconds
                 }
-            </script>
-        
+            </script>      
         <nav>
             <ul>
                     <li><a href="/index.htm">Home</a></li>
@@ -52,18 +51,23 @@
                 </div>
                 </div>
                     <li><a href="Pages/ContactUs.html">Contact Us</a></li>
-            </ul>
+            </ul>          
         </nav>
 
         <article>
             <p>We sell only the fastest, most expensive, and nicest cars on the market.
             <img src="Photos/Home/financing.png" width= 10% align= right></p>
             <br/>
-            <br/>
+            <br/>            
         </article>
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 
     </div>
-
+            <p id="date"></p>
+            <script>
+                var d = new Date();
+                document.getElementById("date").innerHTML = d.toDateString();
+    </script>
 </body>
 
 </html>
