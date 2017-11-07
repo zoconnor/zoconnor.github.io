@@ -5,68 +5,73 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="shotcut icon" href="Photos/favicon.png">
-        <title>Zach's Car Dealership</title>
+    <script type="text/javascript" src="/javascript.js"></script>
+
+    <title>Zach's Car Dealership</title>
 </head>
 
 <body>
 
     <div class="container">
 
-        <div class = "slideshow">
-        <header>
-            <img class="mySlides" src="/Photos/Home/banner.jpg" max width="100%"; align="middle"; height="auto" />
-            <img class="mySlides" src="/Photos/Home/banner2.jpg" max width="100%"; align="middle"; height="auto" />
-            <img class="mySlides" src="/Photos/Home/banner3.jpg" max width="100%"; align="middle"; height="auto" />            
-            <h1>Zach Auto</h1>
+        <div class="slideshow">
+            <header>
+                <img class="mySlides" src="/Photos/Home/banner.jpg" max width="100%" ; align="middle" ; height="auto" />
+                <img class="mySlides" src="/Photos/Home/banner2.jpg" max width="100%" ; align="middle" ; height="auto" />
+                <img class="mySlides" src="/Photos/Home/banner3.jpg" max width="100%" ; align="middle" ; height="auto" />
+                <h1>Zach Auto</h1>
 
-        </header>
-    </div>
-            <script>
-                var myIndex = 0;
-                carousel();
+            </header>
+        </div>
+        
+        <!-- Script for Banner -->
+        <script>
+            var myIndex = 0;
+            carousel();
 
-                function carousel() {
-                    var i;
-                    var x = document.getElementsByClassName("mySlides");
-                    for (i = 0; i < x.length; i++) {
-                        x[i].style.display = "none";
-                    }
-                    myIndex++;
-                    if (myIndex > x.length) {
-                        myIndex = 1
-                    }
-                    x[myIndex - 1].style.display = "block";
-                    setTimeout(carousel, 4000); // Change image every 2 seconds
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
                 }
-            </script>      
+                myIndex++;
+                if (myIndex > x.length) {
+                    myIndex = 1
+                }
+                x[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 4000); // Change image every 2 seconds
+            }
+        </script>
+
         <nav>
-            <ul>
-                    <li><a href="/index.htm">Home</a></li>
-                    <div class="dropdown">
-                        <button class="dropbtn">Products</button>
-                        <div class="dropdown-content">
-                    <a href="/Pages/Coupe.html">Coupe</a>                
+            <a href="/index.htm">Home</a>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Vehicles</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="/Pages/Coupe.html">Coupe</a>
                     <a href="/Pages/Sedan.html">Sedan</a>
-                    <a href="/Pages/SUV.html">SUV</a>                           
+                    <a href="/Pages/SUV.html">SUV</a>
                 </div>
-                </div>
-                    <li><a href="Pages/ContactUs.html">Contact Us</a></li>
-            </ul>          
+            </div>
+            <a href="Pages/ContactUs.html">Contact Us</a>
         </nav>
 
         <article>
             <p>We sell only the fastest, most expensive, and nicest cars on the market.
-            <img src="Photos/Home/financing.png" width= 10% align= right></p>
+                <img src="Photos/Home/financing.png" width=1 0% align=r ight></p>
             <br/>
-            <br/>            
+            <br/>
         </article>
         &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
 
     </div>
-            <p id="date"></p>
-            <script>
-                var d = new Date();
-                document.getElementById("date").innerHTML = d.toDateString();
+    
+    <!-- Script for Date -->
+    <p id="date"></p>
+    <script>
+        var d = new Date();
+        document.getElementById("date").innerHTML = d.toDateString();
     </script>
 </body>
 

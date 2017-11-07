@@ -5,17 +5,27 @@
   <meta charset="utf-8">
 
   <title>Zach's Final Project</title>
-    <p>My home page.</p>
+    <h1>My Racing "Game"</h1>
   <meta name="description" content="HTML5 Template">
 <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="/FinalProject/javascript.js"></script>
 </head>
 
 <body>
     <h2>Click the Lights</h2>
-
 <div onclick="switchLight(0)" class="light stop on" ></div>
 <div onclick="switchLight(1)" class="light slow" ></div>
-<div onclick="switchLight(2)" class="light go" ></div>
+<div onclick="switchLight(2);" class="light go" ></div>
 
+<img id="myImage">MOVE THIS THING>
+    
+    
+<form>
+         <img id="myImage" src="/FinalProject/images/car.jpg" width="200" height="200" />
+         <p>Click button below to move the image to right</p>
+         <input type="button" value="Click Me" onclick="moveRight();" />
+      </form>
+    
+    
 </body>
 </html>
