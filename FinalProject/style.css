@@ -1,0 +1,20 @@
+.light {
+  height: 120px;
+  width : 120px;
+  border-radius: 50%;
+  opacity : 0.3; /* makes colors less bright by default */
+  margin: 0 auto;
+  display: inline-block;
+}
+
+.stop {background-color: red;}
+.slow {background-color: yellow;}
+.go {background-color: green;}
+.on {opacity: 1;}
+
+body {
+  background-color : black;
+  text-align: center;
+  color :white;
+  font-family: Helvetica;
+}
