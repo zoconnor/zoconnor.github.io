@@ -22,8 +22,8 @@ body {
 
 /* Object 1 Styling */
 #myContainer {
-  width: inherit;
-  height: 400px;
+  width: 1350px;
+  height: 200px;
   position: relative;
   background: blue;
 }
@@ -36,8 +36,8 @@ body {
 
 /* Object 2 Styling */
 #myContainer2 {
-  width: inherit;
-  height: 400px;
+  width: 1350px;
+  height: 200px;
   position: relative;
   background: blue;
 }

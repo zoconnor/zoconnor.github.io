@@ -8,21 +8,18 @@
     <h1>My Racing "Game"</h1>
   <meta name="description" content="HTML5 Template">
 <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="FinalProject/javascript.js"></script>
+    <script type="text/javascript" src="/FinalProject/javascript.js"></script>
 </head>
 
 <body>
 
     <!-- Stop Light Stuff -->
     <h2>Click the Lights</h2>
-<div onclick="switchLight(0)" class="light stop on" ></div>
-<div onclick="switchLight(1)" class="light slow" ></div>
-<div onclick="switchLight(2);" class="light go" ></div>
+<div onclick="switchLight(0); myMoveStop(); myMove2Stop();" class="light stop on" ></div>
+<div onclick="switchLight(1);" class="light slow" ></div>
+<div onclick="switchLight(2); myMove(); myMove2();" class="light go" ></div>
 
 <!-- Object Stuff -->
-<p>
-<button onclick="myMove(); myMove2()">Click Me</button> 
-</p>
 
 <div id ="myContainer">
 <div id ="myAnimation"></div>
@@ -32,41 +29,74 @@
 <div id ="myAnimation2"></div>
 </div>
 
-<!-- Object 1 Movement -->
+<!-- Object 1 Go Movement -->
 <script>
 function myMove() {
   var elem = document.getElementById("myAnimation");   
   var pos = 0;
-  var id = setInterval(frame, 10);
+  var id = setInterval(frame, -6);
   function frame() {
-    if (pos == 350) {
+    if (pos == 1350) {
       clearInterval(id);
     } else {
       pos++; 
-      elem.style.top = pos + 'px'; 
       elem.style.left = pos + 'px'; 
     }
   }
 }
 </script>
     
-<!-- Object 2 Movement -->
+<!-- Object 2 Go Movement -->
 <script>
 function myMove2(){
   var elem = document.getElementById("myAnimation2");   
   var pos = 0;
-  var id = setInterval(frame, 10);
+  var id = setInterval(frame, 8);
   function frame() {
-    if (pos == 350) {
+    if (pos == 1350) {
       clearInterval(id);
     } else {
       pos++; 
-      elem.style.top = pos + 'px'; 
       elem.style.left = pos + 'px'; 
     }
   }
 }
 </script>
 
+<!-- Object 1 Slow Movement -->
+<script>
+function myMoveStop() {
+  var elem = document.getElementById("myAnimation");   
+  var pos = 0;
+  var id = setInterval(frame, 0);
+  function frame() {
+    if (pos == 1350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
+</script>
+    
+<!-- Object 2 Slow Movement -->
+<script>
+function myMove2Stop(){
+  var elem = document.getElementById("myAnimation2");   
+  var pos = 0;
+  var id = setInterval(frame, 0);
+  function frame() {
+    if (pos == 1350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
+</script>    
+    
+    
 </body>
 </html>
