@@ -62,24 +62,25 @@
 </head>
 
 <body>
-    <h1 style="font-size: 400%;text-align: center">
+    <h1 style="font-size: 400%;text-align: center;color: white;">
     Zach Auto
     </h1>
-<nav>
-            <ul>
-                    <li><a href="/index.htm">Home</a></li>
-                    <li><a href="/Pages/Coupe.html">Coupe</a></li>
-                    <li><a href="/Pages/Sedan.html">Sedan</a></li>
-                    <li><a href="/Pages/SUV.html">SUV</a></li>
-            </ul>
-        </nav>
-    <h2 style="text-align: center">
+    <h2 style="font-size: 200%; text-align: center; color: white;">
     Contact Us
     </h2>
     <p>
         Please use this form to contact us and we will reply via email as soon as possible. Thank You!
     </p>
         <div class="container">
+            <nav>
+            <ul>
+                    <li><a href="/index.htm">Home</a></li>
+                    <li><a href="/Pages/Coupe.html">Coupe</a></li>
+                    <li><a href="/Pages/Sedan.html">Sedan</a></li>
+                    <li><a href="/Pages/SUV.html">SUV</a></li>
+            </ul>
+        </nav>         
+            <article>
             <form name="contactForm" onsubmit="validateForm()">
                 <label for="fname">First Name:</label>
                 <input type="text" name="firstname" placeholder="Ex: John">
@@ -104,6 +105,7 @@
                 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;<input type="submit" value="Submit">
                 <input type="reset" value="Clear">
             </form>
+            </article>
         </div>
                 <p id="date"></p>
             <script>

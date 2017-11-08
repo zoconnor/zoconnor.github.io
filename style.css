@@ -1,20 +1,20 @@
 body {
-    background-color: lightslategray;
+    background-color: #192231;
 }
 * {
- font-family: avenir, Helvetica, Arial ;
+ font-family: avenir, Helvetica, Roboto;
 }
 div.container {
     width: 100%;
     border: 1px solid #f4f4f4;
-    background-color: #f4f4f4;
+    background-color: #98878f;
     text-align: center;
     padding-bottom: 75;
 }
 header, footer {
     padding: 1em;
     color: #C0B283;
-    background-color: #f4f4f4;
+    background-color: #98878f;
     clear: left;
     text-align: center;
     font-size: 60%;
@@ -47,17 +47,17 @@ h1{
 }
 h2{
     color: #373737;
-    font-size: 150%;
+    font-size: 350%;
 }
 p{
-    color: #373737;
+    color: white;
 }
 a{
     font-size: 200%;
     color: #373737;
 }
 a:hover{
-    color: #DCD0C0;
+    color: #985e6d;
 }
 
 .dropbtn {
@@ -71,7 +71,7 @@ a:hover{
 }
 
 .dropbtn:hover, .dropbtn:focus {
-    color: #DCD0C0;
+    color: #985e6d;
 }
 
 .dropdown {
@@ -82,15 +82,15 @@ a:hover{
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
+    background-color: #192231;
+    min-width: 140px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
 .dropdown-content a {
-    color: #373737;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -102,4 +102,56 @@ a:hover{
 
 .mySlides{
     display: none;
+}
+
+.slider {
+  max-width: 700px;
+  height: 200px;
+  margin: 20px auto;
+  position: relative;
+}
+.slide1,.slide2,.slide3,.slide4,.slide5 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.slide1 {
+  background: url(/Photos/Home/banner.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade 8s infinite;
+-webkit-animation:fade 8s infinite;
+
+} 
+.slide2 {
+  background: url(/Photos/Home/banner2.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade2 8s infinite;
+-webkit-animation:fade2 8s infinite;
+}
+.slide3 {
+    background: url(/Photos/Home/banner3.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade3 8s infinite;
+-webkit-animation:fade3 8s infinite;
+}
+@keyframes fade
+{
+  0%   {opacity:1}
+  33.333% { opacity: 0}
+  66.666% { opacity: 0}
+  100% { opacity: 1}
+}
+@keyframes fade2
+{
+  0%   {opacity:0}
+  33.333% { opacity: 1}
+  66.666% { opacity: 0 }
+  100% { opacity: 0}
+}
+@keyframes fade3
+{
+  0%   {opacity:0}
+  33.333% { opacity: 0}
+  66.666% { opacity: 1}
+  100% { opacity: 0}
 }
