@@ -20,30 +20,35 @@ body {
   overflow: hidden;
 }
 
-/* Object 1 Styling */
-#myContainer {
-  width: 1350px;
-  height: 200px;
-  position: relative;
-  background: blue;
+/* Object Styling */
+    * {
+    margin: 0;
+    padding: 0;
 }
-#myAnimation {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  background-color: red;
+html {
+    margin: 30px 0;
+    overflow-x: hidden;
 }
-
-/* Object 2 Styling */
-#myContainer2 {
-  width: 1350px;
-  height: 200px;
-  position: relative;
-  background: blue;
+div {
+    background: red;
+    height: 80px;
+    width: 80px;
+    display: block;
+    margin-bottom: 30px;
+    position:absolute;
 }
-#myAnimation2 {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  background-color: green;
+.blue {
+    background: blue;
+    top: 500px;
+}
+button {
+    padding: 10px 30px;
+    width: 100px;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: white;
 }

@@ -1,102 +1,88 @@
 <!doctype html>
-
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-
+    <meta charset="utf-8">
+    <meta name="description" content="HTML5 Template">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="/FinalProject/javascript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   
+    
   <title>Zach's Final Project</title>
     <h1>My Racing "Game"</h1>
-  <meta name="description" content="HTML5 Template">
-<link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="/FinalProject/javascript.js"></script>
 </head>
 
 <body>
 
-    <!-- Stop Light Stuff -->
+<!-- Stop Light Stuff -->
     <h2>Click the Lights</h2>
-<div onclick="switchLight(0); myMoveStop(); myMove2Stop();" class="light stop on" ></div>
-<div onclick="switchLight(1);" class="light slow" ></div>
-<div onclick="switchLight(2); myMove(); myMove2();" class="light go" ></div>
-
+<div2 onclick="switchLight(0); myMoveStop(); myMove2Stop();" class="light stop on" ></div2>
+<div2 onclick="switchLight(1);" class="light slow" ></div2>
+<div2 onclick="switchLight(2); myMove(); myMove2();" class="light go" ></div2>
+<article>Let's Race!</article>
+    
 <!-- Object Stuff -->
 
-<div id ="myContainer">
-<div id ="myAnimation"></div>
-</div>
-    
-<div id ="myContainer2">
-<div id ="myAnimation2"></div>
-</div>
+<div class="red"></div>
+<div class="blue"></div>
 
-<!-- Object 1 Go Movement -->
-<script>
-function myMove() {
-  var elem = document.getElementById("myAnimation");   
-  var pos = 0;
-  var id = setInterval(frame, -6);
-  function frame() {
-    if (pos == 1350) {
-      clearInterval(id);
-    } else {
-      pos++; 
-      elem.style.left = pos + 'px'; 
-    }
-  }
-}
-</script>
-    
-<!-- Object 2 Go Movement -->
-<script>
-function myMove2(){
-  var elem = document.getElementById("myAnimation2");   
-  var pos = 0;
-  var id = setInterval(frame, 8);
-  function frame() {
-    if (pos == 1350) {
-      clearInterval(id);
-    } else {
-      pos++; 
-      elem.style.left = pos + 'px'; 
-    }
-  }
-}
-</script>
+<button>Go!</button>
 
-<!-- Object 1 Slow Movement -->
+<!-- Object 1 JQuery Go Movement -->
 <script>
-function myMoveStop() {
-  var elem = document.getElementById("myAnimation");   
-  var pos = 0;
-  var id = setInterval(frame, 0);
-  function frame() {
-    if (pos == 1350) {
-      clearInterval(id);
-    } else {
-      pos++; 
-      elem.style.left = pos + 'px'; 
-    }
-  }
-}
-</script>
+$(document).ready(function() {
+        
+    $('button').click(function() {
+        
+        var r = $('.red'),
+            b = $('.blue'),
+            wW = $(window).width(),
+            rSpeed = Math.floor(Math.random() * wW + wW),
+            bSpeed = Math.floor(Math.random() * wW + wW);
+        
+        function winTest() {
+            if(rSpeed > bSpeed) {
+                alert('Red wins!');
+                reset();
+            } else {
+                alert('Blue wins!');
+                reset();
+            }
+        }
+        
+        function race() {
+            var rAnim = r.animate({
+                            left: rSpeed
+                        }, {
+                            duration: 4000,
+                            done: function() {
+                                bAnim.stop();
+                                winTest();
+                            }
+                        });
+            var bAnim = b.animate({
+                            left: bSpeed
+                        }, {
+                            duration: 4000,
+                            done: function() {
+                                rAnim.stop();
+                                winTest();
+                            }
+                        });
+        }
+        
+        race();
+        
+        function reset() {
+            rSpeed = 0;
+            bSpeed = 0;
+            r.css('left', 0);
+            b.css('left', 0);
+        }
+        
+    });
     
-<!-- Object 2 Slow Movement -->
-<script>
-function myMove2Stop(){
-  var elem = document.getElementById("myAnimation2");   
-  var pos = 0;
-  var id = setInterval(frame, 0);
-  function frame() {
-    if (pos == 1350) {
-      clearInterval(id);
-    } else {
-      pos++; 
-      elem.style.left = pos + 'px'; 
-    }
-  }
-}
+});
 </script>    
-    
-    
+
 </body>
 </html>
