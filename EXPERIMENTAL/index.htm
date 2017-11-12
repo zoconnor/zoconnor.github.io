@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    
+<div class="red"></div>
+<div class="blue"></div>
+
+<button1 id="go">3... 2... 1... Go!</button1>  
+<button2 id="pause">Stop</button2>
+    
+    
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+}
+html {
+    margin: 30px 0;
+    overflow-x: hidden;
+}
+div {
+    background: red;
+    height: 100px;
+    width: 100px;
+    display: block;
+    margin-bottom: 30px;
+    position: absolute;
+}
+.blue {
+    background: blue;
+    top: 200px;
+}
+button1 {
+    padding: 10px 30px;
+    width: 200px;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+    button2 {
+    padding: 10px 30px;
+    width: 200px;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 10;
+}
+</style>   
+    
+<script>
+$(document).ready(function() {
+        
+    $('#go', '#pause').click(function() {
+        if(this.id == "go"){
+            
+        var r = $('.red'),
+            b = $('.blue'),
+            wW = $(window).width(),
+            rSpeed = Math.floor(Math.random() * wW + wW),
+            bSpeed = Math.floor(Math.random() * wW + wW);
+        
+        function winTest() {
+            if(rSpeed > bSpeed) {
+                alert('Red wins!');
+                reset();
+            } else {
+                alert('Blue wins!');
+                reset();
+            }
+        }
+        
+        function race() {
+            var rAnim = r.animate({
+                            left: rSpeed
+                        }, {
+                            duration: 4000,
+                            done: function() {
+                                bAnim.stop();
+                                winTest();
+                            }
+                        });
+            var bAnim = b.animate({
+                            left: bSpeed
+                        }, {
+                            duration: 4000,
+                            done: function() {
+                                rAnim.stop();
+                                winTest();
+                            }
+                        });
+        }
+        
+        race();
+        
+        function reset() {
+            rSpeed = 0;
+            bSpeed = 0;
+            r.css('left', 0);
+            b.css('left', 0);
+        }
+        }
+        
+    });
+    
+});    
+</script>
+    
+</body>
+</html>

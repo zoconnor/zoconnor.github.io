@@ -1,88 +1,89 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="description" content="HTML5 Template">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="/FinalProject/javascript.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   
-    
-  <title>Zach's Final Project</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Zach's Final Project</title>
     <h1>My Racing "Game"</h1>
 </head>
 
 <body>
 
-<!-- Stop Light Stuff -->
-    <h2>Click the Lights</h2>
-<div2 onclick="switchLight(0); myMoveStop(); myMove2Stop();" class="light stop on" ></div2>
-<div2 onclick="switchLight(1);" class="light slow" ></div2>
-<div2 onclick="switchLight(2); myMove(); myMove2();" class="light go" ></div2>
-<article>Let's Race!</article>
-    
-<!-- Object Stuff -->
+    <!-- Stop Light Stuff -->
+    <article>Let's Race!</article>
 
-<div class="red"></div>
-<div class="blue"></div>
+    <div2 onclick="switchLight(0);" class="light stop on" id="pause"></div2>
+    <div2 onclick="switchLight(1);" class="light slow"></div2>
+    <div2 onclick="switchLight(2);" class="light go" id="go"></div2>
 
-<button>Go!</button>
+    <!-- Object Stuff -->
 
-<!-- Object 1 JQuery Go Movement -->
-<script>
-$(document).ready(function() {
-        
-    $('button').click(function() {
-        
-        var r = $('.red'),
-            b = $('.blue'),
-            wW = $(window).width(),
-            rSpeed = Math.floor(Math.random() * wW + wW),
-            bSpeed = Math.floor(Math.random() * wW + wW);
-        
-        function winTest() {
-            if(rSpeed > bSpeed) {
-                alert('Red wins!');
-                reset();
-            } else {
-                alert('Blue wins!');
-                reset();
-            }
-        }
-        
-        function race() {
-            var rAnim = r.animate({
-                            left: rSpeed
-                        }, {
-                            duration: 4000,
-                            done: function() {
-                                bAnim.stop();
-                                winTest();
-                            }
-                        });
-            var bAnim = b.animate({
-                            left: bSpeed
-                        }, {
-                            duration: 4000,
-                            done: function() {
-                                rAnim.stop();
-                                winTest();
-                            }
-                        });
-        }
-        
-        race();
-        
-        function reset() {
-            rSpeed = 0;
-            bSpeed = 0;
-            r.css('left', 0);
-            b.css('left', 0);
-        }
-        
-    });
-    
-});
-</script>    
+    <div class="red"></div>
+
+    <div class="blue"></div>
+
+    <!-- Object 1 JQuery Go Movement -->
+    <script>
+        $(document).ready(function() {
+
+            $("#go").click(function() {
+                var r = $('.red'),
+                    b = $('.blue'),
+                    wW = $(window).width(),
+                    rSpeed = Math.floor(Math.random() * wW + wW),
+                    bSpeed = Math.floor(Math.random() * wW + wW);
+                switchLight(2);
+
+                function winTest() {
+                    if (rSpeed > bSpeed) {
+                        alert('Top wins!');
+                        reset();
+                    } else {
+                        alert('Bottom wins!');
+                        reset();
+                    }
+                    switchLight(0);
+                }
+
+                function race() {
+                    var rAnim = r.animate({
+                        left: rSpeed
+                    }, {
+                        duration: 4000,
+                        done: function() {
+                            bAnim.stop();
+                            winTest();
+                        }
+                    });
+                    var bAnim = b.animate({
+                        left: bSpeed
+                    }, {
+                        duration: 4000,
+                        done: function() {
+                            rAnim.stop();
+                            winTest();
+                        }
+                    });
+                }
+
+                race();
+
+                function reset() {
+                    rSpeed = 0;
+                    bSpeed = 0;
+                    r.css('left', 0);
+                    b.css('left', 0);
+                }
+            });
+
+        });
+    </script>
 
 </body>
+
 </html>
